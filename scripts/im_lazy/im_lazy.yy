@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"im_lazy",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"im_lazy",
+  "parent":{
+    "name":"Скрипты",
+    "path":"folders/Скрипты.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

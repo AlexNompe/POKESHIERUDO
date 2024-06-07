@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"reformat_text_by_effects",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"reformat_text_by_effects",
+  "parent":{
+    "name":"Скрипты",
+    "path":"folders/Скрипты.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
