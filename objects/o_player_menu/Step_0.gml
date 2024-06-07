@@ -5,7 +5,7 @@ visible = global.menus[menu_id]
 
 if visible
 {
-	if keyboard_check_pressed(ord("Z")) or keyboard_check_pressed(ord("X")) and not global.press_z_safe
+	if (keyboard_check_pressed(ord("Z")) or keyboard_check_pressed(ord("X"))) and not global.press_z_safe
 	{
 		global.menus[menu_id] = false
 		global.menus[0] = true
