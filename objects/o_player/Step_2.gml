@@ -1,6 +1,10 @@
-if velocity[0] = 0 and velocity[1] = 0
+if velocity[0] = 0
 {
 	x = ceil_floor(x/16, previous_velocity[0])*16
+	
+}
+if velocity[1] = 0
+{
 	y = ceil_floor(y/16, previous_velocity[1])*16
 }
 

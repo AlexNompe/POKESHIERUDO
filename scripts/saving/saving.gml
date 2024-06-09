@@ -29,14 +29,24 @@ function load(file = "save.ini"){
 		o_player.x = ini_read_real("position",0,0)
 		o_player.y = ini_read_real("position",1,0)
 	}
-	else save()
+	else 
+	{
+		ini_close()
+		save()
+		return 0
+	}
 	if ini_section_exists("sprite")
 	{
 		o_player.sprite_index = ini_read_real("sprite",0,0)
 		o_player.image_index = ini_read_real("sprite",1,0)
 		o_player.sprite_direction = ini_read_string("sprite",2,"down")
 	}
-	else save()
+	else 
+	{
+		ini_close()
+		save()
+		return 0
+	}
 	if ini_section_exists("stats")
 	{
 		global.badges = ini_read_real("stats",0,0)
@@ -46,8 +56,14 @@ function load(file = "save.ini"){
 		global.money = ini_read_real("stats",4,0)
 		global.character_id = ini_read_real("stats",5,floor(random_range(10000,99999)))
 	}
-	else save()
+	else 
+	{
+		ini_close()
+		save()
+		return 0
+	}
 	ini_close()
+	
 	
 	ini_open("userdata.ini")
 	if ini_section_exists("settings")
@@ -76,7 +92,12 @@ function load(file = "save.ini"){
 			break
 		}
 	}
-	else save()
+	else 
+	{
+		ini_close()
+		save()
+		return 0
+	}
 	ini_close()
 }
 function save_translation(){
