@@ -8,7 +8,7 @@ if global.no_menus_open and keyboard_check_pressed(vk_enter)
 	global.menus[menu_id] = true
 }
 
-if visible and not global.menus[2]
+if visible and not global.menus[2] and not global.menus[6]
 {
 	if keyboard_check_pressed(vk_down)
 	{
@@ -82,6 +82,10 @@ if visible and not global.menus[2]
 			case 2:
 				global.menus[menu_id] = false
 				global.menus[5] = true
+				global.press_z_safe = true
+			break
+			case 1:
+				global.menus[6] = true
 				global.press_z_safe = true
 			break
 		}

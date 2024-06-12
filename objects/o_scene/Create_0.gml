@@ -11,8 +11,6 @@ global.press_z_safe = false
 
 layer_set_visible(layer_get_id("Menus"), true)
 
-global.inventory = [[translate("key_test_item_0",global.lang),translate("key_test_item_0_desc",global.lang),1,noone],[translate("key_test_item_1",global.lang),translate("key_test_item_1_desc",global.lang),1,noone],[translate("key_test_item_2",global.lang),translate("key_test_item_2_desc",global.lang),1,noone]]
-
 //STATS
 global.badges = 0
 global.msh_wiki = 1
@@ -34,5 +32,7 @@ global.translated = 0
 global.saved_translations = []
 global.saved_translation_ids = []
 load_translation()
+
+global.inventory = [[translate("key_test_item_0",global.lang),translate("key_test_item_0_desc",global.lang),1,noone],[translate("key_test_item_1",global.lang),translate("key_test_item_1_desc",global.lang),1,noone],[translate("key_test_item_2",global.lang),translate("key_test_item_2_desc",global.lang),1,noone]]
 
 load()
