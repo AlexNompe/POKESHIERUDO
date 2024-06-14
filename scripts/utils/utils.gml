@@ -22,3 +22,14 @@ function file_read_all_text(_filename) {
     buffer_delete(_buffer);
     return _result;
 }
+function shorten_inventory_text(_string,_max_l)
+{
+	new_string = _string
+	if string_length(_string) > _max_l new_string = string_delete(_string,_max_l,string_length(_string)-_max_l+1)
+	
+	if string_char_at(new_string,string_length(new_string)) == " " new_string = string_delete(new_string,string_length(new_string),1)
+	
+	if string_length(_string) > _max_l new_string = string_insert(".",new_string,string_length(new_string)+1)
+	
+	return new_string
+}

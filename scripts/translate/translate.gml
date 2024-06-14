@@ -26,7 +26,7 @@ function translate(text_id,lang){
 				if not array_contains(global.saved_translation_ids,text_id) array_push(global.saved_translation_ids,text_id)
 				if not array_contains(global.saved_translation_ids,text_id) array_push(global.saved_translations,translated_string)
 				else global.saved_translations[array_get_index(global.saved_translation_ids,text_id)] = translated_string
-				return translated_string
+				return string_trim_end(translated_string)
 			}
 		}
 	}
@@ -42,11 +42,11 @@ function translate(text_id,lang){
 				var translated_string = string(string_replace_all(string_split(ar[i],":")[1],"\t","\n"))
 				array_push(global.saved_translation_ids,text_id)
 				array_push(global.saved_translations,translated_string)
-				return translated_string
+				return string_trim_end(translated_string)
 			}
 		}
 	}
-	else return global.saved_translations[array_get_index(global.saved_translation_ids,text_id)]
+	else return string_trim_end(global.saved_translations[array_get_index(global.saved_translation_ids,text_id)])
 	
 	return ""
 }

@@ -13,6 +13,7 @@ function save(file = "save.ini"){
 	ini_write_string("stats", 3, global.character_name)
 	ini_write_real("stats", 4, global.money)
 	ini_write_real("stats", 5, global.character_id)
+	ini_write_string("stats", 6, string_replace_all(json_stringify(global.inventory),"\"","'"))
 	ini_close()
 	
 	ini_open("userdata.ini")
@@ -55,6 +56,7 @@ function load(file = "save.ini"){
 		global.character_name = ini_read_string("stats",3,"ASH")
 		global.money = ini_read_real("stats",4,0)
 		global.character_id = ini_read_real("stats",5,floor(random_range(10000,99999)))
+		global.inventory = json_parse(string_replace_all(ini_read_string("stats",6,"[]"),"'","\""))
 	}
 	else 
 	{

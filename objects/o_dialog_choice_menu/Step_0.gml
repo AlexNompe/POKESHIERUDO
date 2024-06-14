@@ -1,5 +1,5 @@
-x = camera_get_view_x(view_camera[0])+start_pos[0]
-y = camera_get_view_y(view_camera[0])+start_pos[1]
+x = camera_get_view_x(view_camera[0])+start_pos[0]+pos_offset[0]
+y = camera_get_view_y(view_camera[0])+start_pos[1]+pos_offset[1]
 
 visible = global.menus[menu_id] and (o_dialog_menu.current_text = global.text)
 

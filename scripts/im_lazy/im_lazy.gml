@@ -17,4 +17,12 @@ function reset_global_text(){
 	global.text = ""
 	global.choice_pool = []
 	global.choice = 0
+	if object_exists(o_dialog_choice_menu)
+	{
+		o_dialog_choice_menu.pos_offset = [0,0]
+	}
+	else
+	{
+		show_debug_message("Unable to reset \"o_dialog_choice_menu.pos_offset\" in \"reset_global_text()\", no object \"o_dialog_choice_menu\" avaliable :/")
+	}
 }

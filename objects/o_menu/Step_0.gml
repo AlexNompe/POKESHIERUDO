@@ -88,11 +88,17 @@ if visible and not global.menus[2] and not global.menus[6]
 				global.menus[6] = true
 				global.press_z_safe = true
 			break
+			case 0:
+				global.menus[menu_id] = false
+				global.menus[9] = true
+				global.press_z_safe = true
+			break
 		}
 	}
 	
-	if keyboard_check_pressed(ord("X")) or keyboard_check_pressed(vk_enter)
+	if (keyboard_check_pressed(ord("X")) and not global.press_x_safe) or keyboard_check_pressed(vk_enter)
 	{
 		global.menus[menu_id] = false
+		global.press_x_safe = true
 	}
 }
